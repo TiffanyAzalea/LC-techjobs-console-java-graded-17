@@ -37,15 +37,15 @@ public class TechJobs {
             } else if (actionChoice.equals("list")) {
 
                 String columnChoice = getUserSelection("List", columnChoices);
-
+//this prints out each row of job dataTH
                 if (columnChoice.equals("all")) {
                     printJobs(JobData.findAll());
                 } else {
-
+//the jobs will be listed for each column choice you madeTH
                     ArrayList<String> results = JobData.findAll(columnChoice);
 
                     System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
-
+//whatever column choice you chose it prints out that row only TH
                     // Print list of skills, employers, etc
                     for (String item : results) {
                         System.out.println(item);
@@ -117,9 +117,26 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
 
+    //someJobs is all of the jobs; jobs is just one of he jobs; but then once you loop through the jobs all of them print out TH
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+        //list
+        if (someJobs.isEmpty()) {
+            System.out.print("No Results");
+        } else {
+            // loop through the list of jobs
+            for (HashMap<String, String> job : someJobs) {
+                System.out.println("\n*****");
+                for (Map.Entry<String, String> field : job.entrySet()) {
+                    String key = field.getKey();
+                    String value = field.getValue();
+                    System.out.println(key + ": " + value);
+                }
+                System.out.println(("*****"));
+            }
+
+// add code for search term....if statement
+        }
     }
 }
