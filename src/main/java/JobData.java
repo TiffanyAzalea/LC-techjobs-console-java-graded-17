@@ -87,7 +87,7 @@ public class JobData {
      * @return      List of all jobs with at least one field containing the value
      */
     public static ArrayList<HashMap<String, String>> findByValue(String value) {
-// essentially place items in the columns in an array so that they can be searched from the array???
+// essentially place items in the rows in an array so that they can be searched from the array
         // load data, if not already loaded
         loadData();
         ArrayList<HashMap<String,String >> jobs = new ArrayList<>();

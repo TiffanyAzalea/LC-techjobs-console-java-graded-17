@@ -77,7 +77,7 @@ public class TechJobs {
         Boolean validChoice = false;
         String[] choiceKeys = new String[choices.size()];
 
-        // Put the choices in an ordered structure so we can
+        // Put the choices in an ordered structure,so we can
         // associate an integer with each one
         int i = 0;
         for (String choiceKey : choices.keySet()) {
@@ -117,7 +117,7 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
 
-    //someJobs is all of the jobs; jobs is just one of he jobs; but then once you loop through the jobs all of them print out TH
+
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
@@ -136,7 +136,6 @@ public class TechJobs {
                 System.out.println(("*****"));
             }
 
-// add code for search term....if statement
         }
     }
 }
